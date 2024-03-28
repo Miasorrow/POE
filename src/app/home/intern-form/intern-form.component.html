@@ -1,0 +1,29 @@
+<form [formGroup]="interForm" (ngSubmit)="onSubmit()">
+    <legend> Ajouter un stagiaire </legend>
+    <fieldset>
+        <div class="form-field">
+            <input type="text" formControlName="lastname" placeholder="Votre nom...">
+            <!-- Je vais aller dans mon formulaire, faire un controle du last name vérifier si il y a des erreurs, touched erreur uniquement quand activé-->
+            <div *ngIf="interForm.controls['lastname'].errors  && interForm.controls['lastname'].touched">
+                <span *ngIf="interForm.controls['lastname'].hasError('required')">
+                    Le nom ne peut pas être vide teubteub
+                </span>
+                <span *ngIf="interForm.controls['lastname'].hasError('minlength')">
+                    Tu connais pas ton nom ???!!! :o
+                </span>
+            </div>
+        </div>
+        <div class="form-field">
+            <input type="text" formControlName="firstname" placeholder="Votre prénom...">
+                <div class="error" *ngIf="interForm.controls['firstname'].hasError('required') && interForm.controls['firstname'].touched">
+                    Remplir son prénom !
+                </div>
+        </div>
+    </fieldset>
+    <div class="form-field">
+        <button [disabled]="interForm.invalid" type="submit"> Ajouter </button>
+    </div>
+</form>
+
+<!--! Afficher les valeurs en direct en json -->
+{{interForm.value | json }}

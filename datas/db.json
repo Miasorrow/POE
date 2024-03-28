@@ -1,0 +1,39 @@
+{
+  "interns": [
+    {
+      "lastname": "Aubert",
+      "firstname": "Jean-Luc",
+      "id": "1aa9"
+    },
+    {
+      "lastname": "Bond",
+      "firstname": "James",
+      "id": "d701"
+    },
+    {
+      "id": "ec77",
+      "lastname": "Satan",
+      "firstname": "m'habite"
+    },
+    {
+      "id": "8dd7",
+      "lastname": "AiMarre",
+      "firstname": "Jean"
+    },
+    {
+      "id": "e2c8",
+      "lastname": "Jean",
+      "firstname": "Peplu"
+    },
+    {
+      "id": "69f1",
+      "lastname": "Peplu",
+      "firstname": "Jean"
+    },
+    {
+      "id": "191b",
+      "lastname": "leuh",
+      "firstname": "Jeancu"
+    }
+  ]
+}

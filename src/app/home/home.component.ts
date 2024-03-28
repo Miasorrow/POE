@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Intern } from './types/intern.type';
+import { InternService } from './services/intern.service';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -12,14 +14,23 @@ import { Intern } from './types/intern.type';
 
 
 export class HomeComponent {
-  public interns: Array <Intern> = [
-    {
-      lastname:'ARNAUD',
-      firstname: 'Manon'
-    },
-    {
-      lastname: 'la morte',
-      firstname: 'Manon'
-    }
-  ]
+  /**
+   * @var Array<Intern>
+   * Array of Intern to be displayed
+   */
+  interns: Array<Intern> = []
+  constructor(
+    private _service: InternService
+  ) {}
+
+  ngOnInit(): void{
+    this._service.findAll()
+      .pipe(
+        take(1)
+        
+      )
+      .subscribe((interns: Intern[]) => {
+        this.interns = interns 
+      }) 
+  }
 }
