@@ -14,7 +14,9 @@ import { PoeModule } from './poe/poe.module';
     BrowserModule,
     HomeModule,
     AppRoutingModule,
-    PoeModule
+    PoeModule,
+    
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

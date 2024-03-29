@@ -1,1 +1,21 @@
 <p>add-poe works!</p>
+
+<form [formGroup]="poeForm"(ngSubmit)="onSubmit()">
+    <legend> Ajouter une POE </legend>
+    <fieldset>
+        <div class="form-field">
+            <input type="text" formControlName="namepoe" placeholder="Le nom de la poe est">
+            <!-- Je vais aller dans mon formulaire, faire un controle du last name vérifier si il y a des erreurs, touched erreur uniquement quand activé-->
+        </div>
+        <div class="form-field">
+            <input type="number" formControlName="duration" placeholder="La durée est...">
+        </div>
+    </fieldset>
+    <div class="form-field">
+        <button type="submit"> Ajouter </button>
+    </div>
+</form>
+
+{{poeForm.value | json }}
+
+

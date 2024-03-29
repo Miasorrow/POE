@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { InternFormComponent } from './home/intern-form/intern-form.component';
 import { PoeHomeComponent } from './poe/poe-home/poe-home.component';
+import { AddPoeComponent } from './poe/add-poe/add-poe.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,11 @@ const routes: Routes = [
   {
     path:"poe-home",
     component: PoeHomeComponent,
+    pathMatch: "full"
+  },
+  {
+    path:"add-poe",
+    component: AddPoeComponent,
     pathMatch: "full"
   },
   //! Pour rediriger vers home qui remplace nimporte quel redirection, si l'user essaye de faire un / qqchose

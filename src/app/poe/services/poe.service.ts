@@ -16,6 +16,12 @@ export class PoeService {
 
   constructor() { }
 
+  add(poe:PoeType){
+    
+    this.poes.push(poe)
+  }
+
+
   get poes(): Array<PoeType>{
     return this._poes
   }
