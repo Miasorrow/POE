@@ -1,1 +1,16 @@
 <p>poe-home works!</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nom POE</th>
+            <th>Durée</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let poe of poes">
+            <td>{{poe.namepoe}}</td>
+            <td>{{poe.duration}}</td>
+        </tr>
+    </tbody>
+</table>
