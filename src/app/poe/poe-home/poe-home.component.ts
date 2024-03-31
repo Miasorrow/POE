@@ -16,11 +16,13 @@ export class PoeHomeComponent {
     private _poe: PoeService
   ) {}
   ngOnInit(): void{
+    this._poe.findAll()
+      .subscribe((poe:PoeType[])=>{
+        this.poes = poe
+      })
 
 
-  this.poes = this._poe.poes
 
-  console.log(this._poe.poes)
 
   }
 

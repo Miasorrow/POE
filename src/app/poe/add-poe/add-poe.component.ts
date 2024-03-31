@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PoeService } from '../services/poe.service';
+import { PoeType } from '../types/poe-type';
 
 @Component({
   selector: 'app-add-poe',
@@ -39,10 +40,10 @@ export class AddPoeComponent {
 
   onSubmit(): void {
     this._poeService.add(this.poeForm.value)
-       this._router.navigate(['/poe-home'])
-      
+    .subscribe((poe:PoeType[])=>{
+      this._router.navigate(['/poe-home'])
+    })
     
-
   }
 
 }
